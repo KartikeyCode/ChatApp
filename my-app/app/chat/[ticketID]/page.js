@@ -8,6 +8,7 @@ export default function Chat({ params }) {
   const [socket, setSocket] = useState(null);
   const [messages, setMessages] = useState([]);
   const [messageInput, setMessageInput] = useState('');
+  const [selectedFile, setSelectedFile] = useState(null);
 
   useEffect(() => {
     if (ticketID) {
@@ -40,6 +41,15 @@ export default function Chat({ params }) {
     }
   };
 
+  const handleFileUpload = () => {
+    if (socket && selectedFile) {
+      socket.emit('upload', selectedFile, (status) => {
+        console.log(status);
+      });
+      setSelectedFile(null); // Reset selected file after sending
+    }
+  };
+
   return (
     <div>
       <h1>Chat Room: {ticketID}</h1>
@@ -54,6 +64,11 @@ export default function Chat({ params }) {
         onChange={(e) => setMessageInput(e.target.value)}
       />
       <button onClick={sendMessage}>Send</button>
+
+      {/* File upload */}
+      <input type="file" onChange={(e) => setSelectedFile(e.target.files[0])} />
+      <button onClick={handleFileUpload}>Upload File</button>
     </div>
   );
 }
+
