@@ -2,7 +2,6 @@
 import React from 'react';
 import Link from 'next/link';
 import axios from 'axios';
-
 export default function QueryCard({ ticketID, user, subject }) {
   // Function to extract the first 6 words of the subject
   const truncateSubject = (subject) => {
@@ -21,8 +20,8 @@ export default function QueryCard({ ticketID, user, subject }) {
     let data = {
       text: subject
     };
-
-    axios.post('http://13.234.225.39:5000/analyze', data)
+  
+    axios.post('https://13.234.225.39:5000/analyze', data, { withCredentials: true })
       .then(function (response) {
         console.log(response);
         alert(response);
