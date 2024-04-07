@@ -1,4 +1,5 @@
-'use client'
+"use client"
+import React from 'react';
 import axios from 'axios';
 
 export default function TicketForm() {
@@ -10,6 +11,7 @@ export default function TicketForm() {
     const message = document.getElementById('message').value;
     const data = {
       ticketId: clientID,
+      subject: subject,
       sender: "representative",
       message: message
     };
@@ -29,15 +31,21 @@ export default function TicketForm() {
     <div className="Ticket-Form items-center gap-5 flex flex-col p-4 bg-[#406AFF] mt-36 rounded-2xl h-[35rem] w-[25rem]">
       <h1 className="text-white text-2xl font-bold">Create Ticket</h1>
       <div className="flex gap-5">
-        <h2 className="text-white text-2xl">UserID:</h2> {/* clientID */}
+        <h2 className="text-white text-2xl">UserID:</h2>
         <input type="text" id="clientID" name="clientID" className="border-2 rounded-xl" />
       </div>
       <div className="flex gap-5">
-        <h2 className="text-white text-2xl">Subject:</h2> {/* subject */}
-        <input type="text" id="subject" name="subject" className="border-2 rounded-xl" />
+        <h2 className="text-white text-2xl">Category:</h2>
+        <select id="subject" name="subject" className="border-2 rounded-xl">
+          <option value="Fraud">Fraud</option>
+          <option value="Card">Card</option>
+          <option value="General">General</option>
+          <option value="Investment">Investment</option>
+          <option value="Loan">Loan</option>
+        </select>
       </div>
-      <div className="flex flex-col gap-5">
-        <h2 className="text-white text-2xl">Description:</h2> {/* message */}
+      <div className="flex flex-col gap-5 items-center">
+        <h2 className="text-white text-2xl">Description:</h2>
         <textarea id="message" name="message" className="border-2 rounded-xl w-[20rem] h-[10rem]" />
       </div>
       <button className="bg-white p-5 rounded-3xl mt-5 hover:scale-110 transition-all" onClick={handleSubmit}>

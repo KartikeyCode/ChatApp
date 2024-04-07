@@ -2,7 +2,8 @@
 import React from 'react';
 import Link from 'next/link';
 import axios from 'axios';
-export default function QueryCard({ ticketID, user, subject }) {
+
+export default function QueryCard({ ticketID, user, subject, category }) {
   // Function to extract the first 6 words of the subject
   const truncateSubject = (subject) => {
     // Split the subject into words
@@ -20,7 +21,7 @@ export default function QueryCard({ ticketID, user, subject }) {
     let data = {
       text: subject
     };
-  
+
     axios.post('https://13.234.225.39:5000/analyze', data, { withCredentials: true })
       .then(function (response) {
         console.log(response);
@@ -32,11 +33,32 @@ export default function QueryCard({ ticketID, user, subject }) {
       });
   };
 
+  let borderColor;
+  switch (category) {
+    case 'fraud':
+      borderColor = 'red';
+      break;
+    case 'investment':
+      borderColor = 'green';
+      break;
+    case 'loan':
+      borderColor = 'gray'; // Changed 'grey' to 'gray'
+      break;
+    case 'card':
+      borderColor = 'gold';
+      break;
+  }
+
+  // Define inline styles for the border
+  const borderStyle = {
+    border: `4px solid ${borderColor}`
+  };
+
   return (
-    <div className='flex gap-5 items-center'>
+    <div className='flex gap-5 items-center font-semibold'>
       <Link href={`/chat/${ticketID}`}>
-        <div className="bg-[#02ACCE] w-[25rem] h-28 xl:w-[40rem] rounded-xl mt-5 p-4 flex flex-col cursor-pointer">
-          <h1 className="text-white md:text-xl"> # {ticketID} </h1>
+        <div style={borderStyle} className={`bg-[#02ACCE] w-[25rem] h-28 xl:w-[40rem] rounded-xl mt-5 p-4 flex flex-col cursor-pointer`}>
+          <div className='flex justify-between'><h1 className="text-white md:text-xl"> # {ticketID}</h1> <h2 className="text-white md:text-xl"> Category: {category} </h2> </div>
           <h1 className="text-white md:text-xl"> User: {user} </h1>
           <h1 className="text-white md:text-xl"> Subject: {truncatedSubject}... </h1>
         </div>

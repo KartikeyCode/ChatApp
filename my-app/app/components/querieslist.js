@@ -13,6 +13,7 @@ export default function QueriesList() {
                         ticketID={query.ticket_id}
                         user={query.user}
                         subject={query.summary}
+                        category={query.category}
                     />
                 ))}
             </div>

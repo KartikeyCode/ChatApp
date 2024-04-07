@@ -1,32 +1,38 @@
 [
     {
-        "user" : "Kartikey",
+        "user": "Kartikey",
         "summary": "Kartikey needs assistance with uploading a document for proof of address. He requires guidance or support in completing this task to fulfill the necessary requirements. This document is crucial for verification purposes and is essential for Kartikey to proceed with certain transactions or applications.",
-        "ticket_id":"13sdf21312c"
+        "category": "fraud",
+        "ticket_id": "13sdf21312c"
     },
     {
-        "user" : "Aryan",
-        "summary": " Aryan is seeking detailed information about the various loan plans available. He wants to explore and understand the different options offered by the organization thoroughly. Aryan aims to make an informed decision about applying for a loan that aligns with his financial goals and requirements. He seeks clarity on interest rates, repayment terms, eligibility criteria, and any associated fees or charges.",
-        "ticket_id":"344"
+        "user": "Aryan",
+        "summary": "Aryan is seeking detailed information about the various loan plans available. He wants to explore and understand the different options offered by the organization thoroughly. Aryan aims to make an informed decision about applying for a loan that aligns with his financial goals and requirements. He seeks clarity on interest rates, repayment terms, eligibility criteria, and any associated fees or charges.",
+        "category": "loan",
+        "ticket_id": "344"
     },
     {
-        "user" : "Tyagi",
+        "user": "Tyagi",
         "summary": "Tyagi is inquiring about the directions or guidance to reach the head office of the organization. He needs assistance in finding the location or contact details to visit the head office for a specific purpose or inquiry. Tyagi may have questions or concerns that require direct interaction with the organization's representatives or management, and thus, knowing how to reach the head office is crucial for him.",
-        "ticket_id":"123213" 
+        "category": "general",
+        "ticket_id": "123213"
     },
     {
-        "user" : "Samantha",
-        "summary": "  Samantha has a query related to payments and seeks clarification or assistance regarding a payment issue. She requires support in resolving the payment-related matter to ensure a smooth transaction or resolution of the concern. Samantha may be facing challenges such as payment processing delays, discrepancies in transaction records, or issues with payment methods. Addressing these concerns promptly is essential to maintain customer satisfaction and trust. ",
-        "ticket_id":"8901"
+        "user": "Samantha",
+        "summary": "Samantha has a query related to payments and seeks clarification or assistance regarding a payment issue. She requires support in resolving the payment-related matter to ensure a smooth transaction or resolution of the concern. Samantha may be facing challenges such as payment processing delays, discrepancies in transaction records, or issues with payment methods. Addressing these concerns promptly is essential to maintain customer satisfaction and trust.",
+        "category": "card",
+        "ticket_id": "8901"
     },
     {
-        "user" : "Rahul",
-        "summary": "Rahul is encountering difficulties logging into the organization's portal. He needs assistance in troubleshooting the login issue to regain access to the portal for performing necessary tasks or accessing relevant information. ",
-        "ticket_id":"4567"
+        "user": "Rahul",
+        "summary": "Rahul is encountering difficulties logging into the organization's portal. He needs assistance in troubleshooting the login issue to regain access to the portal for performing necessary tasks or accessing relevant information.",
+        "category": "investment",
+        "ticket_id": "4567"
     },
     {
-        "user" : "Tuhina",
+        "user": "Tuhina",
         "summary": "Tuhina is requesting an update on the status of her loan application. She seeks information about the progress of her application and any necessary steps or documents required to expedite the process or ensure timely processing of her loan request.",
-        "ticket_id":"7890"
+        "category": "loan",
+        "ticket_id": "7890"
     }
 ]
