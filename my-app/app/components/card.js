@@ -25,7 +25,7 @@ export default function QueryCard({ ticketID, user, subject }) {
     axios.post('http://13.234.225.39:5000/analyze', data)
       .then(function (response) {
         console.log(response);
-        alert(response);
+        alert(JSON.stringify(response.data));
         // Handle response here, like updating state with the summary
       })
       .catch(function (error) {
