@@ -26,7 +26,7 @@ export default function Login() {
     <div className="min-h-screen flex flex-col items-center justify-center">
       <Navbar />
       <div className="login-form">
-        <div className="bg-[#406AFF] gap-10 p-4 w-screen h-screen flex flex-col items-center justify-center">
+        <div className="bg-[#02ACCE] gap-10 p-4 w-screen h-screen flex flex-col items-center justify-center">
           <input
             placeholder="Username"
             value={username}

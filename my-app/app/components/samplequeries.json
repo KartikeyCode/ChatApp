@@ -5,14 +5,28 @@
         "ticket_id":"13sdf21312c"
     },
     {
-        "user" : "Kartikey",
-        "summary": "Need to upload document for proof of address",
+        "user" : "Aryan",
+        "summary": "What are the available loan plans?",
         "ticket_id":"344"
     },
     {
-        "user" : "Kartikey",
-        "summary": "Need to upload document for proof of address",
+        "user" : "Tyagi",
+        "summary": "how to reach your head office ?",
         "ticket_id":"123213"
+    },
+    {
+        "user" : "Samantha",
+        "summary": "Payment related query",
+        "ticket_id":"8901"
+    },
+    {
+        "user" : "Rahul",
+        "summary": "Unable to login to the portal",
+        "ticket_id":"4567"
+    },
+    {
+        "user" : "Priya",
+        "summary": "Request for loan application status update",
+        "ticket_id":"7890"
     }
-
 ]
