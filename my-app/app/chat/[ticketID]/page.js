@@ -12,7 +12,7 @@ export default function Chat({ params }) {
 
   useEffect(() => {
     if (ticketID) {
-      const newSocket = io.connect('hhttps://socketserverbarclays.onrender.com/', {transports: ['websocket']});
+      const newSocket = io.connect('https://socketserverbarclays.onrender.com/', {transports: ['websocket']});
       setSocket(newSocket);
 
       newSocket.on('connect', () => {
